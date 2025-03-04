@@ -243,6 +243,7 @@ a {
 }
 .footer__number:hover {
   color: #373AFF;
+  cursor: pointer;
 }
 .footer__number:active {
   color: #7D80FF;
