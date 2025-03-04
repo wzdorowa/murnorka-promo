@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Мурнорка промо, учебный проект">
+  <meta name="description" content="Мурнорка промо - учебная работа по вёрстке страницы на второй ступени школы дизайнеров Бюро Горбунова">
+  <link rel="stylesheet" href="index.css">
+  <!-- <link rel="shortcut icon" href="./styles.scss" type='image/x-icon'> -->
+  <title>Мурнорка</title>
+</head>
+<body>
+  <header class="header" >
+    <span class="header__logo">Мурнорка</span>
+    <div class="header__navigation">
+      <a class="header__link" href="#">
+        Женщинам
+      </a>
+      <a class="header__link" href="#">
+        Мужчинам
+      </a>
+      <a class="header__link" href="#">
+        Детям
+      </a>
+      <a class="header__link" href="#">
+        Аксессуары
+      </a>
+    </div>
+    <div class="header__buttons">
+      <a class="header__account" href="#">
+        <img src="public/account.svg" width={24} height={24} />
+      </a>
+      <a class="header__favorites" href="#">
+        <img src="public/favorite.svg" width={24} height={24} />
+      </a>
+      <a class="header__cart" href="#">
+        <img src="public/cart.svg" width={24} height={24} />
+      </a>
+    </div>
+  </header>
+  <main class="hero">
+    <h1 class="hero__title">Зима, как Искусство</h1>
+    <span class="hero__subtitle">
+      Коллекция меховых шапок 2024 — 2025
+    </span>
+    <a class="hero__product" href="#">
+      <img
+        class="hero__img"
+        src="public/gletcher.webp"
+        width="100%"
+        object-fit="cover"
+      />
+      <div class="hero__price">
+        <span>Глетчер</span>
+        <span>11 900 ₽</span>
+      </div>
+    </a>
+    <p class="hero__description">
+      Мы создали коллекцию меховых шапок, в которых тепло, комфортно и
+      стильно. Натуральный мех защищает от ветра и мороза, а продуманная
+      посадка делает каждую модель удобной для повседневной носки. Коллекция
+      включает модели для мужчин, женщин и детей.
+    </p>
+  </main>
+  <footer class="footer">
+    <span class="footer__copyright">© Мурнорка, 2008</span>
+    <div class="footer__navigation">
+      <a class="footer__link" href="#">
+        Блог
+      </a>
+      <a class="footer__link" href="#">
+        Оплата и доставка
+      </a>
+    </div>
+    <div class="footer__contacts">
+      <a class="footer__number" href="#" type="tel">
+        {`+7 (800) 555-1234`}
+      </a>
+      <a class="footer__email" href="#" type="email">
+        support@murnorka.ru
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
