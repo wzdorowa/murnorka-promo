@@ -28,26 +28,66 @@ a {
   align-items: center;
 }
 
-.header__link, .footer__link, .footer__email {
-  text-decoration: underline 0.5px;
-  text-underline-offset: 3px;
-  transition: color 200ms ease-in-out;
+.header {
+  gap: 24px;
 }
-.header__link:hover, .footer__link:hover, .footer__email:hover {
-  color: #373AFF;
-}
-.header__link:active, .footer__link:active, .footer__email:active {
-  color: #7D80FF;
-}
-
-.header__logo {
+.header__logo-mobile {
   font-family: "Benguiat Rus", serif;
-  font-size: 40px;
-  text-transform: uppercase;
+  font-size: 30px;
+}
+@media (min-width: 600px) {
+  .header__logo-mobile {
+    display: none;
+  }
+}
+.header__logo {
+  display: none;
+}
+@media (min-width: 600px) {
+  .header__logo {
+    display: inline;
+    font-family: "Benguiat Rus", serif;
+    text-transform: uppercase;
+    font-size: 32px;
+  }
+}
+@media (min-width: 800px) {
+  .header__logo {
+    font-size: 40px;
+  }
+}
+.header__navigation-scroll {
+  position: relative;
+  overflow: hidden;
+}
+.header__navigation-scroll::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, white);
+}
+.header__navigation {
+  display: flex;
+  gap: 16px;
+  overflow-x: scroll;
+  padding-right: 20px;
+}
+@media (min-width: 800px) {
+  .header__navigation {
+    gap: 24px;
+  }
 }
 .header__buttons {
   display: flex;
-  gap: 20px;
+  gap: 16px;
+}
+@media (min-width: 800px) {
+  .header__buttons {
+    gap: 20px;
+  }
 }
 .header__icon {
   width: 24px;
@@ -62,28 +102,78 @@ a {
   color: #7D80FF;
 }
 
-.header__navigation, .footer__navigation, .footer__contacts {
-  display: flex;
-  gap: 24px;
+.header__link, .footer__link, .footer__email {
+  text-decoration: underline 0.5px;
+  text-underline-offset: 3px;
+  transition: color 200ms ease-in-out;
+}
+.header__link:hover, .footer__link:hover, .footer__email:hover {
+  color: #373AFF;
+}
+.header__link:active, .footer__link:active, .footer__email:active {
+  color: #7D80FF;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 120px 0 200px 0;
+  padding: 80px 0 140px 0;
+}
+@media (min-width: 600px) {
+  .hero {
+    padding: 100px 0 160px 0;
+  }
+}
+@media (min-width: 800px) {
+  .hero {
+    padding: 120px 0 200px 0;
+  }
 }
 .hero__title {
   font-family: "Benguiat Rus";
-  font-size: 90px;
+  font-size: 34px;
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 12px;
 }
+@media (min-width: 500px) {
+  .hero__title {
+    font-size: 54px;
+  }
+}
+@media (min-width: 600px) {
+  .hero__title {
+    font-size: 70px;
+  }
+}
+@media (min-width: 800px) {
+  .hero__title {
+    font-size: 90px;
+  }
+}
 .hero__subtitle {
-  font-size: 24px;
-  margin-bottom: 60px;
+  font-size: 18px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+@media (min-width: 500px) {
+  .hero__subtitle {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 600px) {
+  .hero__subtitle {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 800px) {
+  .hero__subtitle {
+    margin-bottom: 60px;
+  }
 }
 .hero__product {
   position: relative;
@@ -92,12 +182,17 @@ a {
 }
 .hero__price {
   position: absolute;
-  left: 36px;
+  left: 20px;
   bottom: 16px;
   display: flex;
   flex-direction: column;
   gap: 4px;
   color: white;
+}
+@media (min-width: 800px) {
+  .hero__price {
+    left: 36px;
+  }
 }
 .hero__img {
   display: block;
@@ -114,6 +209,37 @@ a {
   padding: 0;
 }
 
+.footer {
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.footer__copyright {
+  width: 100%;
+}
+@media (min-width: 800px) {
+  .footer__copyright {
+    width: auto;
+  }
+}
+.footer__navigation, .footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media (min-width: 800px) {
+  .footer__navigation, .footer__contacts {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+.footer__contacts {
+  align-items: end;
+}
+@media (min-width: 800px) {
+  .footer__contacts {
+    align-items: normal;
+  }
+}
 .footer__number:hover {
   color: #373AFF;
 }
@@ -121,17 +247,6 @@ a {
   color: #7D80FF;
 }
 
-/* @media (max-width: 600px) {
-  .main {
-    align-items: center;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-} */
 @font-face {
   font-family: "Benguiat Rus";
   src: url("../assets/fonts/benguiat.woff2") format("woff2"), url("../assets/fonts/benguiat.woff") format("woff");
