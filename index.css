@@ -41,8 +41,9 @@ a {
 }
 
 .header__logo {
-  font-family: "BenguiatRus", serif;
+  font-family: "Benguiat Rus", serif;
   font-size: 40px;
+  line-height: 100%;
   text-transform: uppercase;
 }
 .header__buttons {
@@ -74,7 +75,7 @@ a {
   padding: 120px 0 200px 0;
 }
 .hero__title {
-  font-family: "BenguiatRus";
+  font-family: "Benguiat Rus";
   font-size: 90px;
   font-weight: 400;
   text-transform: uppercase;
@@ -134,12 +135,18 @@ a {
   }
 } */
 @font-face {
-  font-family: "BenguiatRus";
-  src: url("../assets/fonts/benguiat-rus.woff") format("woff"), url("../assets/fonts/benguiat-rus.woff2") format("woff2");
+  font-family: "Benguiat Rus";
+  src: url("../assets/fonts/benguiat.woff2") format("woff2"), url("../assets/fonts/benguiat.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Moderustic";
   src: url("../assets/fonts/moderustic.woff") format("woff"), url("../assets/fonts/moderustic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 /*# sourceMappingURL=index.css.map */
