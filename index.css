@@ -103,7 +103,8 @@ a {
 }
 
 .header__link, .footer__link, .footer__email {
-  text-decoration: underline 0.5px;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
   text-underline-offset: 3px;
   transition: color 200ms ease-in-out;
 }
