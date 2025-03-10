@@ -132,7 +132,7 @@ a {
   }
 }
 .hero__title {
-  font-family: "Benguiat Rus";
+  font-family: "Benguiat Rus", serif;
   font-size: 34px;
   font-weight: 400;
   text-transform: uppercase;
